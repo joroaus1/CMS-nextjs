@@ -1,0 +1,111 @@
+/* Directory Studio — dashboard polish */
+:root {
+  --dcms-brand: #ff385c;
+  --dcms-brand-2: #e00b41;
+}
+
+.dcms-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 28px;
+  letter-spacing: -0.02em;
+}
+.dcms-logo__mark,
+.dcms-icon {
+  color: var(--dcms-brand);
+}
+.dcms-icon {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.dcms-home {
+  margin-bottom: calc(var(--base) * 2);
+}
+.dcms-home__hero {
+  border-radius: 20px;
+  padding: 28px 32px;
+  color: #fff;
+  background: linear-gradient(135deg, var(--dcms-brand) 0%, var(--dcms-brand-2) 55%, #bd1e59 100%);
+  box-shadow: 0 12px 32px -12px rgba(224, 11, 65, 0.45);
+  h2 {
+    margin: 0 0 4px;
+    color: #fff;
+  }
+  p {
+    margin: 0;
+    opacity: 0.9;
+    font-size: 16px;
+  }
+}
+.dcms-home__stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+.dcms-stat {
+  display: flex;
+  flex-direction: column;
+  padding: 18px 20px;
+  border-radius: 16px;
+  background: var(--theme-elevation-50);
+  border: 1px solid var(--theme-elevation-100);
+}
+.dcms-stat__value {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+.dcms-stat__label {
+  color: var(--theme-elevation-600);
+  font-size: 13px;
+  margin-top: 4px;
+}
+.dcms-home__actions {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+.dcms-action {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 20px;
+  border-radius: 16px;
+  text-decoration: none;
+  color: inherit;
+  background: var(--theme-elevation-0);
+  border: 1px solid var(--theme-elevation-150);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  &:hover {
+    transform: translateY(-2px);
+    border-color: var(--dcms-brand);
+    box-shadow: 0 10px 24px -14px rgba(0, 0, 0, 0.35);
+  }
+}
+.dcms-action__emoji {
+  font-size: 28px;
+}
+.dcms-action__title {
+  font-weight: 600;
+  font-size: 16px;
+}
+.dcms-action__text {
+  color: var(--theme-elevation-600);
+  font-size: 13px;
+}
+
+@media (max-width: 1100px) {
+  .dcms-home__stats,
+  .dcms-home__actions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Softer, rounder controls */
+.btn--style-primary {
+  border-radius: 10px;
+}
